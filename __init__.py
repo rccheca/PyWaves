@@ -62,9 +62,12 @@ def setChain(chain = CHAIN):
     if chain.lower()=='mainnet' or chain.lower()=='w':
         CHAIN = 'mainnet'
         CHAIN_ID = 'W'
-    else:
+    elif chain.lower()=='testnet' or chain.lower()=='t':
         CHAIN = 'testnet'
         CHAIN_ID = 'T'
+    else:
+        CHAIN = 'custom'
+        CHAIN_ID = chain
 
 def setNode(node = NODE, chain = CHAIN):
     global NODE, CHAIN, CHAIN_ID
